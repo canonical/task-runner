@@ -1,0 +1,6 @@
+name: cronjob-webteam-ircbot-review-notifier
+schedule: "0 9 * * 1-5"
+image: prod-comms.ps5.docker-registry.canonical.com/task-runner
+
+run: 
+  curl --request POST -F "secret=$HUBOT_RELEASE_NOTIFICATION_SECRET" "https://webteam-ircbot.canonical.com/hubot/gh-pull-request-notification?rooms=web--design"
