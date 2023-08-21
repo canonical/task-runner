@@ -8,5 +8,5 @@ run:
 env:
   - name: HUBOT_RELEASE_NOTIFICATION_SECRET
     secretKeyRef:
-      key: irc-secrets
-      name: hubot-release-notification-secret
+      key: hubot-release-notification-secret
+      name: irc-secrets
